@@ -1,0 +1,265 @@
+.form-popup-wrap {
+	display: inline-block;
+	position: relative;
+	&-full {
+		width: 100%;
+	}
+}
+.form-popup {
+	position: absolute;
+	z-index: 101;
+	width: 500px;
+	left: 50%;
+	margin-left: -250px;
+	visibility: hidden;
+	top: 100px;
+	.transition (top .2s);
+	opacity: 0;
+	text-align: left;
+	@media (max-width: 1199px) {
+		width: 380px;
+		margin-left: -190px;
+	}
+	@media (max-width: 767px) {
+		width: 260px;
+		margin-left: -100px;
+		.quote-form .input-half {
+			width: 100%;
+		}
+	}
+	&--left {
+		left: -80px;
+		margin-left: 0;
+		.quote-form:after {
+			left: 135px !important;
+		}
+		@media (max-width: 1199px) {
+			left: 0;
+			left: -40px;
+			.quote-form:after {
+				left: 75px !important;
+			}
+		}
+		@media (max-width: 1024px) {
+			left: 0;
+			left: 0;
+			.quote-form:after {
+				left: 35px !important;
+			}
+		}
+	}
+	&.opened {
+		opacity: 1;
+		top: 60px;
+		visibility: visible;
+	}
+	.quote-form {
+		padding: 28px 26px;
+		margin: 0;
+		max-width: 100%;
+		@media (max-width: 767px) {
+			padding: 18px 15px;
+		}
+		&:after {
+			left: 50%
+		}
+	}
+	.btn {
+		margin: 9px 0 0 !important;
+	}
+}
+.form-popup-close {
+	position: absolute;
+	right: 5px;
+	top: 5px;
+	cursor: pointer;
+	z-index: 1;
+	font-size: 20px;
+	transition: .2s;
+	&:hover {
+		opacity: .7;
+	}
+}
+.form-modal {
+	position: relative;
+	width: 1325px;
+	padding: 45px 77px;
+	@media (max-width: 1199px) {
+		padding: 45px 50px;
+	}
+	@media (max-width: 991px) {
+		padding: 35px 40px;
+	}
+	@media (max-width: 767px) {
+		padding: 20px 30px;
+	}
+	max-width: 95%;
+	background-color: #fff;
+	border-radius: 5px;
+	margin: 20px auto;
+	text-align: center;
+	display: none;
+	h3 {
+		font-size: 30px;
+		margin-bottom: 25px;
+	}
+}
+.mfp-content .form-modal {
+	display: block;
+}
+.booking-form {
+	text-align: left;
+}
+.form-box {
+	background: #fff;
+	padding: 16px 18px 18px;
+	margin-bottom: 20px;
+	.box-shadow (0 0 20px rgba(0, 0, 0, .1));
+	.form-control {
+		background-color: #f0f0f0;
+		color: #7c7c7c;
+		font-size: 15px;
+		line-height: 21px;
+		height: 35px;
+		padding: 7px 10px;
+		border: 0;
+		.box-shadow (none);
+	}
+	textarea.form-control {
+		height: 112px;
+	}
+	&-label {
+		font-size: 15px;
+		line-height: 18px;
+		margin-bottom: 10px;
+		font-weight: bold;
+		span {
+			color: #ff0000;
+		}
+	}
+	&-row {
+		width: 100%;
+		margin-top: 10px;
+		&:first-child {
+			margin-top: 0;
+		}
+	}
+	&-col-1 {
+		max-width: ~'calc(33.3% - 7px)';
+		width: 231px;
+		padding-right: 10px;
+		&:last-child {
+			padding-right: 0;
+		}
+		float: left;
+		@media (max-width: 767px) {
+			width: 100%;
+			max-width: 300px;
+			float: none;
+			margin-top: 10px;
+			padding-right: 0;
+			&:first-child {
+				margin-top: 0;
+			}
+		}
+	}
+	&-col-2 {
+		max-width: ~'calc(50% - 5px)';
+		width: 378px;
+		padding-right: 10px;
+		&:last-child {
+			padding-right: 0;
+		}
+		float: left;
+		@media (max-width: 665px) {
+			width: 100%;
+			max-width: 300px;
+			float: none;
+			margin-top: 10px;
+			padding-right: 0;
+			&:first-child {
+				margin-top: 0;
+			}
+		}
+	}
+	&--width-1 {
+		width: ~'calc(29.4% - 19px)';
+		margin-right: 19px;
+		float: left;
+		@media (max-width: 991px) {
+			width: 100%;
+			float: none;
+			margin-right: 0;
+			& > * {
+				max-width: 300px;
+			}
+		}
+	}
+	&--width-2 {
+		width: 70.6%;
+		float: left;
+		@media (max-width: 991px) {
+			width: 100%;
+			float: none;
+		}
+	}
+}
+.booking-form label.error {
+	margin-top: 0;
+}
+.mfp-close-btn-in .mfp-close {
+	font-size: 13px;
+	color: @custom-color;
+	text-decoration: underline;
+	top: 5px !important;
+	right: 15px !important;
+	opacity: 1;
+	&:hover {
+		text-decoration: none;
+	}
+}
+body.modal-open {
+	overflow: hidden !important;
+}
+
+/* overlay at start */
+
+.mfp-fade.mfp-bg {
+	opacity: 0;
+	-webkit-transition: all 0.15s ease-out;
+	-moz-transition: all 0.15s ease-out;
+	transition: all 0.15s ease-out;
+}
+
+/* overlay animate in */
+
+.mfp-fade.mfp-bg.mfp-ready {
+	opacity: 0.8;
+}
+
+/* overlay animate out */
+
+.mfp-fade.mfp-bg.mfp-removing {
+	opacity: 0;
+}
+
+/* content at start */
+
+.mfp-fade.mfp-wrap .mfp-content {
+	opacity: 0;
+	-webkit-transition: all 0.15s ease-out;
+	-moz-transition: all 0.15s ease-out;
+	transition: all 0.15s ease-out;
+}
+
+/* content animate it */
+
+.mfp-fade.mfp-wrap.mfp-ready .mfp-content {
+	opacity: 1;
+}
+
+/* content animate out */
+
+.mfp-fade.mfp-wrap.mfp-removing .mfp-content {
+	opacity: 0;
+}

@@ -1,0 +1,49 @@
+.row-icon {
+	margin-top: 10px;
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -o-flex;
+	display: flex;
+	align-items: center;
+	&-icon {
+		min-width: 70px;
+		i {
+			display: block;
+			width: 51px;
+			height: 51px;
+			font-size: 26px;
+			line-height: 52px;
+			background-color: @custom-color;
+			border-radius: 50%;
+			color: #fff;
+			text-align: center;
+			@media (max-width: 1199px) {
+				width: 46px;
+				height: 46px;
+				font-size: 22px;
+				line-height: 47px;
+			}
+			&.icon-calendar {
+				padding-left: 3px;
+			}
+			&.icon-same-day-delivery {
+				line-height: 50px;
+				@media (max-width: 1199px) {
+					line-height: 45px;
+				}
+			}
+		}
+	}
+	&-text {
+		font-family: @custom-font;
+		font-size: 22px;
+		color: #2a2a2a;
+		.transition (.2s);
+	}
+	&:hover {
+		.row-icon-text {
+			color: @custom-color;
+		}
+	}
+}

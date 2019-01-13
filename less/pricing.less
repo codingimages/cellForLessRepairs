@@ -1,0 +1,131 @@
+.price-table {
+	&>tbody>tr.table-header {
+		background: transparent !important;
+	}
+	&>tbody>tr>th[scope=col] {
+		font-size: 18px;
+		line-height: 23px;
+		font-weight: 500;
+		border: 0;
+		padding: 15px;
+	}
+	&>tbody>tr>td,
+	&>tbody>tr>th[scope=row] {
+		border: 0;
+		padding: 15px;
+		font-size: 15px;
+		line-height: 23px;
+		font-weight: 400;
+		border-bottom: 3px solid #fff;
+	}
+	&>tbody>tr>th[scope=row] {
+		font-weight: 600;
+	}
+	&>tbody>tr:nth-of-type(even) {
+		background-color: #f2f2f2;
+	}
+	&>tbody>tr:nth-of-type(odd) {
+		background-color: #f7f7f7;
+	}
+}
+.price-box:nth-child(2) .price-box-inside {
+	background-image: url(../images/price-bg-2.jpg);
+}
+.price-box:nth-child(3) .price-box-inside {
+	background-image: url(../images/price-bg-3.jpg);
+}
+.price-box:nth-child(4) .price-box-inside {
+	background-image: url(../images/price-bg-4.jpg);
+}
+.price-box {
+	&-inside {
+		background: url(../images/price-bg-1.jpg) no-repeat center top #eff0f5;
+		background-size: 100% auto;
+		height: 100%;
+		text-align: center;
+		.box-shadow ( 0 0 12px rgba(0, 0, 0, .1));
+		border: 1px solid #e8e8e8;
+		display: -webkit-flex;
+		display: -moz-flex;
+		display: -ms-flex;
+		display: -o-flex;
+		display: flex;
+		flex-direction: column;
+		@media (max-width: 767px) {
+			max-width: 300px;
+			margin-left: auto;
+			margin-right: auto;
+		}
+	}
+	@media (max-width: 767px) {
+		margin-top: 15px;
+		&:first-child {
+			margin-top: 0;
+		}
+	}
+	@media (max-width: 991px) and (min-width: 768px) {
+		width: ~'calc(50% - 1px)';
+		margin-top: 30px;
+		&:nth-child(1),
+		&:nth-child(2) {
+			margin-top: 0;
+		}
+	}
+	&-top {
+		padding: 22px 20px 35px;
+	}
+	&-icon {
+		i {
+			margin: 0 auto;
+			display: block;
+			width: 144px;
+			height: 144px;
+			font-size: 56px;
+			line-height: 136px;
+			background-color: #fff;
+			border-radius: 50%;
+			color: @custom-color;
+			border: 7px solid #fff;
+			.box-shadow ( 0 0 0 0 #fff);
+			.transition (.4s);
+		}
+	}
+	&-title {
+		font-size: 22px;
+		line-height: 28px;
+		font-family: @custom-font;
+		margin-top: 25px;
+	}
+	&-text {
+		font-size: 15px;
+		line-height: 22px;
+		margin-top: 15px;
+	}
+	&-price {
+		height: 80px;
+		margin-top: auto;
+		background: #fff;
+		padding: 18px 25px;
+		font-size: 20px;
+		line-height: 40px;
+		font-family: @custom-font;
+		span {
+			font-size: 40px;
+			color: @custom-color;
+			text-transform: uppercase;
+		}
+		b {
+			color: red;
+			display: inline-block;
+			vertical-align: top;
+			margin-top: -7px;
+			padding-left: 2px;
+		}
+	}
+	&:hover {
+		.price-box-icon i {
+			.box-shadow ( 0 0 0 12px rgba(255, 255, 255, .3));
+			border-color: #b2bbd9;
+		}
+	}
+}

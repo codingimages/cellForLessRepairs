@@ -1,0 +1,45 @@
+.text-post {
+	margin-bottom: 8px;
+	img {
+		margin-top: 8px;
+		max-width: 100%;
+	}
+	div p:last-child {
+		margin-bottom: 0;
+	}
+}
+p.info + .text-post {
+	margin-top: 35px;
+}
+
+.post {
+	margin-bottom: 20px;
+	.box-shadow (0 8px 15px 0 rgba(0, 0, 0, 0.1));
+	.image {
+		img{
+			width: 100%;
+		}
+	}
+	.inside {
+		padding: 20px 25px 28px;
+	}
+	.title, .title a {
+		text-transform: none;
+		text-decoration: none;
+	}
+	.title a:hover {
+		text-decoration: underline;
+	}
+}
+.post-tips-carousel.slick-dotted {
+	margin-bottom: 30px;
+}
+@media (max-width: 767px) {
+	.post {
+		max-width: 370px;
+		margin: 25px auto 35px;
+	}
+	.post-tips-carousel .slick-dots {
+		bottom: -20px;
+	}
+}

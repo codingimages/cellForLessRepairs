@@ -1,0 +1,48 @@
+.box-number {
+	text-decoration: none;
+	padding: 0 5px;
+	@media (max-width: 767px) {
+		margin-top: 15px;
+		&:first-child {
+			margin-top: 0;
+		}
+	}
+	&-inside {
+		background-color: #fff;
+		padding: 20px 15px;
+		display: -webkit-flex;
+		display: -moz-flex;
+		display: -ms-flex;
+		display: -o-flex;
+		display: flex;
+		align-items: center;
+		height: 100%;
+		border-radius: 8px;
+		.box-shadow ( 0 0 12px rgba(0, 0, 0, .1));
+		border: 1px solid #e8e8e8;
+	}
+	&-icon {
+		min-width: 72px;
+		span {
+			display: block;
+			width: 59px;
+			height: 59px;
+			background: @custom-color;
+			text-align: center;
+			font-size: 28px;
+			line-height: 59px;
+			border-radius: 50%;
+			color: #fff;
+		}
+	}
+	&-text {
+		font-size: 14px;
+		line-height: 20px;
+		font-weight: bold;
+	}
+}
+.box-number:hover {
+	.box-number-text {
+		color: @custom-color;
+	}
+}

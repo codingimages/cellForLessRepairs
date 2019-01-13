@@ -1,0 +1,235 @@
+.page-footer {
+	position: relative;
+	background: url('../images/footer-bg.jpg') no-repeat center center @custom-color-alt;
+	background-size: cover;
+	color: #fff;
+	.footer-content {
+		padding: 55px 0 0;
+		@media (max-width: 991px) {
+			padding: 35px 0 0;
+		}
+		@media (max-width: 767px) {
+			padding: 30px 0 0;
+		}
+		position: relative;
+	}
+	clear: both;
+	.container {
+		position: relative;
+		z-index: 100;
+	}
+	ul.footer-menu {
+		text-align: center;
+		margin: 0 0 32px;
+		@media (max-width: 767px) {
+			margin-bottom: 40px;
+		}
+		padding: 0;
+		list-style: none;
+		width: 100%;
+		text-align: center;
+		li {
+			display: inline-block;
+			margin: 0 8px;
+			@media (max-width: 991px) {
+				margin: 0 3px;
+			}
+			@media (max-width: 767px) {
+				display: block;
+				margin: 15px 0;
+			}
+			a {
+				font-family: @custom-font;
+				color: #fff;
+				font-size: 16px;
+				line-height: 1.5em;
+				text-decoration: none;
+				text-transform: uppercase;
+				.transition (all 0.25s ease);
+				&:hover {
+					color: @custom-color;
+				}
+				@media (max-width: 991px) {
+					font-size: 14px;
+				}
+			}
+		}
+	}
+	.footer-links {
+		margin: 0 0 40px;
+		padding: 0;
+		list-style: none;
+		@media (max-width: 767px) {
+			margin: 0 0 30px;
+		}
+		a {
+			position: relative;
+			color: #fff;
+			font-size: 16px;
+			line-height: 18px;
+			text-decoration: underline;
+			.transition (all 0.25s ease);
+			&:hover {
+				color: @custom-color;
+				text-decoration: none;
+			}
+		}
+		a + a {
+			padding: 0 0 0 24px;
+			&:before {
+				position: absolute;
+				left: 8px;
+				top: 2px;
+				content: '|';
+				color: #fff !important;
+			}
+		}
+		@media (max-width: 767px) {
+			a {
+				padding: 0 !important;
+				display: block;
+				line-height: 24px;
+				&:before {
+					display: none !important;
+				}
+			}
+		}
+	}
+	.copyright {
+		color: #fff;
+		font-size: 16px;
+		line-height: 24px;
+		margin: 30px 0 0;
+		text-align: center;
+		@media (max-width: 767px) {
+			max-width: 280px;
+			margin-left: auto;
+			margin-right: auto;
+			span {
+				display: block;
+			}
+		}
+	}
+	.footer-map {
+		height: 365px;
+		width: 100%;
+	}
+	.social-links {
+		text-align: center;
+		margin-bottom: 37px;
+		ul li {
+			margin: 0 10px;
+			a {
+				color: #989898;
+				font-size: 32px;
+			}
+		}
+	}
+	.footer-phone {
+		margin-bottom: 28px;
+		color: #fff;
+		font-size: 30px;
+		line-height: 1em;
+		@media (max-width: 767px) {
+			font-size: 22px;
+			line-height: 37px;
+		}
+		font-family: @custom-font;
+		color: #fff;
+		text-align: center;
+		.number {
+			color: @custom-color;
+			white-space: nowrap;
+		}
+		.icon {
+			font-size: 18px;
+			line-height: 30px;
+			padding-right: 10px;
+			@media (max-width: 767px) {
+				font-size: 14px;
+				line-height: 22px;
+			}
+		}
+	}
+	.footer-columns {
+		margin-bottom: 24px;
+		& > div {
+			@media (max-width: 991px) {
+				margin: 20px auto;
+				max-width: 300px;
+				text-align: center;
+			}
+		}
+	}
+	.contact-info {
+		margin: 0;
+		padding-left: 45px;
+		a {
+			color: #fff;
+		}
+		.icon {
+			top: 4px;
+			font-size: 30px;
+			color: #fff !important;
+		}
+		.icon.icon-mail-black {
+			top: 1px;
+		}
+		@media (max-width: 991px) {
+			font-size: 14px;
+		}
+		@media (max-width: 767px) {
+			font-size: 15px;
+			max-width: 240px;
+			margin-left: auto;
+			margin-right: auto;
+		}
+	}
+}
+@media (max-width: 767px) {
+	.page-footer {
+		#footer-map {
+			margin: 0 -15px;
+			width: ~'calc(100% + 30px)';
+		}
+	}
+}
+
+/* back to top button */
+
+.back-to-top {
+	position: fixed;
+	bottom: 0;
+	opacity: 0;
+	visibility: hidden;
+	right: 5%;
+	z-index: 1000;
+	.transition (all 0.4s ease);
+	@media (max-width: 1199px) {
+		right: 20px;
+	}
+	a {
+		position: relative;
+		top: 0;
+		display: block;
+		color: @custom-color;
+		font-size: 64px;
+		line-height: 1em;
+		text-decoration: none !important;
+		.transition (all 0.3s ease);
+		@media (max-width: 767px) {
+			font-size: 50px;
+		}
+	}
+	&:hover {
+		a {
+			top: -10px;
+			opacity: .8;
+		}
+	}
+	&.visible {
+		opacity: 1;
+		visibility: visible;
+		bottom: 50px;
+	}
+}
